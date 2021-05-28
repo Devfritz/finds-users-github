@@ -1,4 +1,4 @@
-import { Route,  BrowserRouter as Router, } from 'react-router-dom';
+import { Route,  BrowserRouter as Router, Switch} from 'react-router-dom';
 import './App.css';
 import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from './pages';
 
@@ -6,12 +6,22 @@ function App() {
   return (
  
    <Router>
-      <div>
-        <Dashboard></Dashboard>
-        <Login />
-        <Error />
-        <Route path="/" />
-     </div>
+     <Switch>
+
+        <Route path='/' exact>
+          <Dashboard></Dashboard>
+        </Route>
+
+         <Route path="/login" exact>
+              <Login />
+          </Route>
+
+          <Route path='*'>
+            <Error />
+          </Route>
+     </Switch>
+     
+        
    </Router>
      
   );
