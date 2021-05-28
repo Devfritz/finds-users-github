@@ -1,4 +1,4 @@
-import { Route, Router } from 'react-router';
+import { Route,  BrowserRouter as Router, } from 'react-router-dom';
 import './App.css';
 import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from './pages';
 
