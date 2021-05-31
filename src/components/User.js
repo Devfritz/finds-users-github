@@ -5,9 +5,19 @@ import Followers from './Followers';
 import {GithubContext} from '../context/context'
 
 const User = () => {
-  const data = useContext(GithubContext)
-  console.log(data)
-  return <h2>search component</h2>;
+  const {githubUser} = useContext(GithubContext)
+  return <section className="section">
+      <Wrapper className="section-center">
+         <Card>
+
+         </Card>
+
+         <Followers>
+           
+         </Followers>
+
+      </Wrapper>
+  </section>
 };
 
 const Wrapper = styled.div`
