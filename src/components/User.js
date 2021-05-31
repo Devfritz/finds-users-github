@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
 import Card from './Card';
 import Followers from './Followers';
+import {GithubContext} from '../context/context'
+
 const User = () => {
+  const data = useContext(GithubContext)
+  console.log(data)
   return <h2>search component</h2>;
 };
 
